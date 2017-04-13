@@ -1,1 +1,71 @@
 Android project
+package com.example.amarmalik.data;
+
+import android.content.ContentValues;
+import android.content.Context;
+import android.database.Cursor;
+import android.database.sqlite.SQLiteDatabase;
+import android.database.sqlite.SQLiteOpenHelper;
+import android.util.Log;
+import android.widget.Toast;
+
+/**
+ * Created by Amar Malik on 27-03-2017.
+ */
+
+public class MyDatabase extends SQLiteOpenHelper {
+    public static final int version=1;
+    public static String name="amar";
+    Context context;
+    MyDatabase(Context c) {
+        super(c, name, null, version);
+        context=c;
+    }
+
+    @Override
+    public void onCreate(SQLiteDatabase sqLiteDatabase) {
+        Toast.makeText(context,"oncreate",Toast.LENGTH_SHORT).show();
+        String s="create table info(id integer primary key,name text,password text)";
+        sqLiteDatabase.execSQL(s);
+    }
+
+    @Override
+    public void onUpgrade(SQLiteDatabase sqLiteDatabase, int i, int i1) {
+
+    }
+    public void insertValue(String s1, String a){
+        SQLiteDatabase sl=getWritableDatabase();
+        ContentValues cv=new ContentValues();
+        cv.put("name",s1);
+        cv.put("password",a);
+        sl.insert("info",null,cv);
+        Toast.makeText(context,"Insertion Completed", Toast.LENGTH_SHORT).show();
+    }
+    public void showValues(){
+            SQLiteDatabase sqLiteDatabase=getReadableDatabase();
+        String s1="select * from info";
+        Cursor cr=sqLiteDatabase.rawQuery(s1,null);
+        while (cr.moveToNext()){
+            int a=cr.getInt(0);
+            String b=cr.getString(1);
+            String c=cr.getString(2);
+            Log.d("Database",""+a+""+b+""+c);
+        }
+        Log.d("Database","show complete");
+    }
+  /*  public void updateValues(String s1,int a){
+        SQLiteDatabase sqLiteDatabase=getWritableDatabase();
+        ContentValues contentValues=new ContentValues();
+        contentValues.put("password",007);
+        contentValues.put("name","RAM");
+        String values[]={s1,""+a};
+        sqLiteDatabase.update("info",contentValues,"name=? and password",values);
+        Log.d("DataBase","update completed");
+    }
+    public void deleteValues(String s){
+     SQLiteDatabase sqLiteDatabase=getWritableDatabase();
+        String vslues[]={name};
+        sqLiteDatabase.delete("info","name=?",vslues);
+        Log.d("DataBase","delete complete");
+    }  */
+}
