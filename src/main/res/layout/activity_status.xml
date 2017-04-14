@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.dineshkumar.safhjal.status"
+    android:background="@drawable/unnamed">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="15dp"
+        android:layout_marginLeft="5dp"
+        android:text="Aadhar No"
+        android:id="@+id/aadhar"
+        android:textSize="25sp"
+        android:textColor="#000"
+        android:textStyle="bold"/>
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/aad"
+        android:hint="Enter Your Aadhar No"
+        android:layout_margin="15dp"
+        android:textColorHint="#000"
+        android:textColor="#eaeae3"
+        android:textStyle="bold"
+        android:inputType="number"
+        android:layout_toRightOf="@id/aadhar"/>
+    <Button
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/search"
+        android:text="See Status"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:onClick="search"
+        android:background="@drawable/shape4"
+        android:layout_marginRight="17dp"
+        android:layout_marginEnd="17dp"
+        android:layout_marginBottom="16dp"
+        android:layout_above="@+id/showstat"
+        android:layout_alignRight="@+id/aad"
+        android:layout_alignEnd="@+id/aad" />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:background="@drawable/shape4"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="71dp"
+        android:textColor="#eaeae3"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:id="@+id/showstat" />
+</RelativeLayout>

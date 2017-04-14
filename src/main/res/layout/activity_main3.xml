@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.dineshkumar.safhjal.Main3Activity"
+    android:background="@drawable/unnamed">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="15dp"
+        android:layout_marginLeft="5dp"
+        android:text="Aadhar No"
+        android:id="@+id/aadhar"
+        android:textSize="25sp"
+        android:textColor="#000"
+        android:textStyle="bold"/>
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/aad"
+        android:hint="Enter Your Aadhar No"
+        android:layout_margin="15dp"
+        android:textColorHint="#000"
+        android:textColor="#3E2723"
+        android:inputType="number"
+        android:layout_toRightOf="@id/aadhar" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="15dp"
+        android:text="Phone No"
+        android:id="@+id/phone"
+        android:textSize="25sp"
+        android:textColor="#000"
+        android:textStyle="bold"
+        android:layout_below="@id/aadhar"/>
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/phon"
+        android:hint="Enter Your Phone No"
+        android:textColorHint="#000"
+        android:inputType="number"
+        android:textColor="#3E2723"
+        android:layout_alignBaseline="@+id/phone"
+        android:layout_alignBottom="@+id/phone"
+        android:layout_alignLeft="@+id/aad"
+        android:layout_alignStart="@+id/aad" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Address"
+        android:id="@+id/addr"
+        android:layout_alignLeft="@+id/phone"
+        android:layout_marginTop="10dp"
+        android:textSize="25sp"
+        android:textColor="#000"
+        android:textStyle="bold"
+        android:layout_below="@id/phone"/>
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/address"
+        android:hint="Enter The Adress For \n which you want to\n log complaint"
+        android:textColorHint="#000"
+        android:layout_below="@+id/phon"
+        android:textColor="#3E2723"
+        android:layout_toRightOf="@id/phone"
+        android:layout_alignLeft="@+id/phon" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Your Complaint:"
+        android:id="@+id/real"
+        android:layout_alignLeft="@+id/phone"
+        android:layout_marginTop="40dp"
+        android:textSize="25sp"
+        android:textColor="#000"
+        android:textStyle="bold"
+        android:layout_below="@id/addr"/>
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="270dp"
+        android:id="@+id/realcomp"
+        android:gravity="center"
+        android:textColorHint="#3E2723"
+        android:textStyle="bold"
+        android:textSize="20sp"
+        android:textColor="#3E2723"
+        android:background="@drawable/shape4"
+        android:layout_below="@+id/real"
+        android:hint="Write Your Complaint here"
+        />
+    <Button
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/realcomp"
+        android:layout_alignParentRight="true"
+        android:text="Submit"
+        android:layout_marginTop="5dp"
+        android:textStyle="bold"
+        android:textColor="#212121"
+        android:textSize="20dp"
+        android:background="@drawable/shape2"
+        android:onClick="submit"
+        />
+</RelativeLayout>

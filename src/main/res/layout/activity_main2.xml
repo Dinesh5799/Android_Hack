@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="@drawable/unnamed"
+    tools:context="com.example.dineshkumar.safhjal.Main2Activity">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btnLogout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:layout_alignParentBottom="true"
+            android:background="@drawable/shape9"
+            android:text="Logout"
+            android:textColor="#000"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColorLink="@color/colorAccent" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/complain"
+            android:layout_marginTop="200dp"
+            android:text="Complaint"
+            android:background="@drawable/shape4"
+            android:textColor="#000"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:onClick="comp"/>
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/complain"
+            android:id="@+id/stats"
+            android:text="See Complaint Status"
+            android:textColor="#000"
+            android:layout_marginTop="15dp"
+            android:textSize="20sp"
+            android:background="@drawable/shape4"
+            android:textStyle="bold"
+            android:onClick="stat"/>
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/stats"
+            android:id="@+id/stat"
+            android:layout_marginTop="15dp"
+            android:text="More..."
+            android:background="@drawable/shape4"
+            android:textColor="#000"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:onClick="about"
+            />
+
+    </RelativeLayout>
+</LinearLayout>
