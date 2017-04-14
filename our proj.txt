@@ -122,3 +122,42 @@ public class MainActivity extends AppCompatActivity {
         //}
     }
 }
+
+
+
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+=======================================Shared Prefrences===============================================================
+
+Search File
+
+SharedPreferences sp=getSharedPreferences(statusAadh.getText().toString(),MODE_PRIVATE);
+        String Aadhar=sp.getString("Aadhar","");
+        String Contact=sp.getString("Phone","");
+        String Address=sp.getString("Address","");
+        String Status=sp.getString("Status","");
+        if(statusAadh.getText().toString().equals(Aadhar))
+        {
+        showStat.setText("Aadhar no is:::"+Aadhar+"\nPhone no is :::"+Contact+"\nStatus is:::In Progress"+"\n Address is:::"+Address);
+        Toast.makeText(this,"Fetching Data",Toast.LENGTH_LONG).show();
+    }
+    else
+        {
+            showStat.setText("");
+            showStat.setText("Aadhar no is  not a valid Entry ");
+        }*/
+        
+        
+        
+        +++++++++++++++++++++++++++++++++++++++++++++++Shared Preferences ====================================
+        ========================Submit function=============================
+        
+        /*SharedPreferences sp=getSharedPreferences(aad.getText().toString(),MODE_PRIVATE);
+        SharedPreferences.Editor spe=sp.edit();
+        spe.putString("Aadhar",aad.getText().toString());
+        spe.putString("Phone", phone.getText().toString());
+        spe.putString("Address",address.getText().toString());
+        spe.putString("Complaint",complain.getText().toString());
+        spe.putString("Status","Initiated");
+        spe.commit();
+*/
+
