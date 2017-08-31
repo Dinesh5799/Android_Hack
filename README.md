@@ -1,2 +1,3 @@
 # Android_Hack
-Our android hackthon work
+Android Project:
+    SafhJal is an android app which is a solution to the problem of water contamination by various sources. Using this app a user can log a complaint mentioning the address where water is getting  contaminated, then the complaint is processed to concerned department and action is taken.For user in return to his work done if the complaint is genuine he will be given karma points using which he can be benefited. This app stops water contamination forehand and decreases the amount of revenue spent by government and helps government to utilize it somewhere else really useful.
